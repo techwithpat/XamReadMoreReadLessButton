@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamReadMoreReadLessButton.ReadMoreReadLessControl">
+    <StackLayout>
+        <Label x:Name="LabelContent">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState Name="ReadLess">
+                        <VisualState.Setters>
+                            <Setter Property="MaxLines" Value="2" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                     <VisualState Name="ReadMore">
+                        <VisualState.Setters>
+                            <Setter Property="MaxLines" Value="0" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>              
+            </VisualStateManager.VisualStateGroups>
+        </Label>
+
+        <Button x:Name="ReadMoreReadLessButton" Clicked="ReadMoreReadLessButton_Clicked">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState Name="ReadLess">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value="Read more" />
+                        </VisualState.Setters>
+                    </VisualState>
+                     <VisualState Name="ReadMore">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value="Read less" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>              
+            </VisualStateManager.VisualStateGroups>
+        </Button>
+   </StackLayout>
+</ContentView>
